@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap" placeholder="Nhập tiền">
+<button onclick="anvao()">Tính thuế</button>
+<h2 id="res">Kết quả</h2>
+</body>
+</html>
+<script>
+    function anvao() {
+        let a = document.getElementById('nhap').value;
+        if (a > 8000000) {
+            let s = a * 35 / 100
+            document.getElementById('res').innerHTML = s
+        } else if (a < 80000000 && a > 52000000) {
+            let s = a * 30 / 100
+            document.getElementById('res').innerHTML = s
+        } else if (a < 52000000 && a > 32000000) {
+            let s = a * 25 / 100
+            document.getElementById('res').innerHTML = s
+        }else if (a > 18000000 && a < 32000000) {
+            let s = a * 20 / 100
+            document.getElementById('res').innerHTML = s
+
+        }else if (a < 18000000 && a > 10000000) {
+            let s = a * 15 / 100
+            document.getElementById('res').innerHTML = s
+        }else if (a < 10000000 && a > 5000000) {
+            let s = a * 10 / 100
+            document.getElementById('res').innerHTML = s
+        }else if (a < 5000000) {
+            let s = a * 5 / 100
+            document.getElementById('res').innerHTML = a + 'không phải đóng thuế'
+        }else {}
+
+    }
+</script>
