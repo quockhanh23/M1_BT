@@ -5,17 +5,33 @@
     <title>Title</title>
 </head>
 <body>
-<input id="nhap1" type="text">
+<input id="nhap" type="text" placeholder="Nhập số kw">
 
-<button onclick="anvao">an vao</button>
-<h2 id="res">ket qua</h2>
+<button onclick="anvao()">kw/h</button>
+<h2 id="res">Kết quả</h2>
 </body>
 </html>
 <script>
     function anvao() {
-        let a = document.getElementById('nhap1').value;
-        let giadien = a * 1678
-        if
+        let a = document.getElementById('nhap').value;
+        if (a < 50 && a > 0) {
+            let s = a * 1678
+            document.getElementById('res').innerHTML = "Bậc thang 1 = " + s + "Đồng"
+        } else if (a < 100 && a > 50) {
+            let s = a * 1734
+            document.getElementById('res').innerHTML = "Bậc thang 2 = " + s + "Đồng"
+        } else if (a > 100 && a < 200 ) {
+            let s = a * 2014
+            document.getElementById('res').innerHTML = "Bậc thang 3 = " + s + "Đồng"
+        } else if (a > 200 && a < 300) {
+            let s = a * 2536
+            document.getElementById('res').innerHTML = "Bậc thang 4 = " + s + "Đồng"
+        } else if (a> 300) {
+            let s = a * 2834
+            document.getElementById('res').innerHTML = "Bậc thang 5 = " + s + "Đồng"
+        } else {
+            document.getElementById('res').innerHTML = "không tính được"
+        }
 
     }
 </script>
