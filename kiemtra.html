@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Cạnh của một tam giác</h2>
+<input type="text" id="nhap1" placeholder="nhập cạnh a">
+<input type="text" id="nhap2" placeholder="nhập cạnh b">
+<input type="text" id="nhap3" placeholder="nhập cạnh c">
+<button id="an" onclick="tinh()">Kiểm tra</button>
+<h2 id="res">Kết quả</h2>
+</body>
+</html>
+<script>
+    function tinh() {
+        let a = document.getElementById('nhap1').value
+        let b = document.getElementById('nhap2').value
+        let c = document.getElementById('nhap3').value
+        if (a > 0 && b > 0 && c > 0) {
+            document.getElementById('res').innerHTML = 'là cạnh của một tam giác'
+        } else {
+            document.getElementById('res').innerHTML = ' ko cạnh của một tam giác'
+        }
+        if (a + b > c) {
+            document.getElementById('res').innerHTML = 'là cạnh của một tam giác'
+
+        } else if (a + b > c) {
+            document.getElementById('res').innerHTML =  'là cạnh của một tam giác'
+
+        } else if (b + c > a) {
+            document.getElementById('res').innerHTML = 'là cạnh của một tam giác'
+        } else if (a + c > b) {
+            document.getElementById('res').innerHTML = 'là cạnh của một tam giác'
+        }else {
+        }
+    }
+
+</script>

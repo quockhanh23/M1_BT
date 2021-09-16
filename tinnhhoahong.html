@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Tính hoa hồng doanh số</h1>
+
+<input id="nhap" type="text" placeholder="nhập doanh số">
+<button id="r" onclick="tinh()">Tính hoa hồng</button>
+<h2 id="res"> 5 % </h2>
+</body>
+</html>
+<script>
+    function tinh() {
+        let doanhso = document.getElementById('nhap').value
+        let hoahong = doanhso * 5 / 100
+        document.getElementById('res').innerHTML = 'Hoa hồng = '+ hoahong + " Đồng"
+    }
+</script>

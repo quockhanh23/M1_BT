@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Cước điện thoại</h2>
+<input type="text" id="nhap" placeholder="Nhập số phút">
+<button id="anvao1" onclick="anvao()">Giá tiền</button>
+<h2 id="cuoc"></h2>
+</body>
+</html>
+<script>
+    function anvao() {
+        let sophut = document.getElementById('nhap').value;
+        a = sophut * 1000
+        document.getElementById('cuoc').innerHTML = a
+    }
+</script>
